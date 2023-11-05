@@ -6,12 +6,6 @@
     --font: 'Verdana', 'Geneva', 'Tahoma', sans-serif;
 }
 
-body {
-    font-size: 14px;
-    display: block;
-    background-color: lightblue;
-  }
-
 
 header {
     padding: 20px;
