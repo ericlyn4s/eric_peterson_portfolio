@@ -1,11 +1,10 @@
 * {
-    
+    font-family: var(--font);
 }
 
 :root {
     --font: 'Verdana', 'Geneva', 'Tahoma', sans-serif;
 }
-
 
 header {
     height: 70px;
@@ -13,11 +12,9 @@ header {
     background-color: darkcyan;
     color: white;
     margin: 0px;
-    
-  }
+}
 
 h1 {
-    padding: 20px;
     display: inline;
 }
 
@@ -26,37 +23,85 @@ nav {
 }
 
 a {
-    float: right;
+    text-align: right;
+    vertical-align: middle;
     display: inline;
     flex-wrap: wrap;  
     margin-right: 20px;
-    justify-content: space-evenly;
     flex-direction: column;
-    align-items: flex-start;
     
-}
-
-#subheader {
-    display: inline;
-    text-align: right;
-}
-
-#subsection {
-    display: box;
-    flex-wrap: wrap;
-}
-
-img {
-    width: 200px;
-    margin: 30px;
 }
 
 body {
     font-size: 14px;
-    display: grid;
-    background-color: lightblue;
     margin: 0px;
-  }
+}
+
+#headshot {
+    background-color:rgb(245, 240, 240);
+    height: 150px;
+    margin: 0px;
+}
+
+img {
+    display: inline;
+    height: 150px;
+    margin: 0px;
+    margin-left: 50px;
+}
+
+#headshot h2 {
+    float: right;
+    display: inline;
+    font-family: var(--font);
+    font-size: 14px;
+    color: darkcyan;
+    margin: 100px 100px 10px 0px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: 10px;
+    color: rgb(5, 51, 79);
+}
+
+#about-me {
+    grid-area: 1 / 1 / 2 / 2;
+    text-align: right;
+    vertical-align: middle;
+    margin: 20px;
+    padding: 20px;
+    border-right: solid;
+    border-right-color: rgb(5, 51, 79);
+}
+
+#about-me-text {
+    grid-area: 1 / 2 / 2 / 4;
+    font-size: 11px;
+    
+}
+
+#my-work {
+    grid-area: 2 / 1 / 3 / 2;
+    text-align: right;
+    vertical-align: middle;
+    margin: 20px;
+    padding: 20px;
+    border-right: solid;
+    border-right-color: rgb(5, 51, 79);
+}
+
+#contact-me {
+    grid-area: 3 / 1 / 4 / 2;
+    text-align: right;
+    vertical-align: middle;
+    margin: 20px;
+    padding: 20px;
+    border-right: solid;
+    border-right-color: rgb(5, 51, 79);
+}
 
 
 @media screen and (max-width: 768px) {
