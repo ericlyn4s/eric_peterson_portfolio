@@ -1,5 +1,5 @@
 * {
-    font-family: var(--font);
+    font-family: var(--font); 
 }
 
 :root {
@@ -8,7 +8,6 @@
 
 header {
     height: 70px;
-    font-family: var(--font);
     background-color: darkcyan;
     color: white;
 }
@@ -16,10 +15,12 @@ header {
 h1 {
     display: inline;
     font-size: 30px;
+    margin-top: 40px;
 }
 
 nav {
-    float: right;   
+    float: right; 
+    margin-top: 20px;  
 }
 
 a {
@@ -32,6 +33,10 @@ a {
     font-size: 15px;
     text-decoration: none;
     color: white;
+}
+
+a:hover {
+    color: rgb(5, 51, 79);
 }
 
 body {
@@ -56,7 +61,7 @@ img {
     float: right;
     display: inline;
     font-family: var(--font);
-    font-size: 14px;
+    font-size: 15px;
     color: darkcyan;
     margin: 100px 100px 10px 0px;
 }
@@ -85,7 +90,7 @@ main {
 
 #about-me-text {
     grid-area: 1 / 2 / 2 / 6;
-    font-size: 11px;
+    font-size: 15px;
     padding: 30px 0;
 }
 
@@ -94,18 +99,27 @@ main {
 }
 
 .project {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align items at the bottom of the container */
     margin: 10px;
     border: 5px solid darkcyan;
-    
+    padding: -10px;
+}
+
+.project:hover {
+    opacity: 0.5;
 }
 
 .project h3 {
-    display: inline;
+    text-align: left;
+    width: 50%;
     border-left: 0px;
     padding: 4px;  
     background-color: darkcyan;
     color: white;
 }
+
 
 #html-css {
     grid-area: 2 / 2 / 4 / 6;
@@ -149,9 +163,53 @@ main {
     color: white;
 }
 
+#contact-area a:hover {
+    color: rgb(5, 51, 79);
+}
+
 @media screen and (max-width: 768px) {
-    main,
+    
     nav {
-      flex-direction: column;
+        margin: 0px;
+    }
+
+    img {
+        display: block;
+        margin: 0px;
+        align: center;
+    }
+
+    #headshot h2 {
+        display: none;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(1, 2fr);
+        grid-template-rows: repeat(6, 1fr);
+        color: rgb(5, 51, 79);
+    }
+
+    #about-me-text {
+        margin-left: 35px;
+    }
+    
+    .project h3 {
+        width: 100%;
+        padding: 0px; 
+        font-size: 11px; 
+    }
+
+    .subsection {
+        margin: 10px 0px;
+        font-size: 10px;
+    }
+
+    #contact-area a {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        width:50%;
+        font-size: 11px;
     }
   }
