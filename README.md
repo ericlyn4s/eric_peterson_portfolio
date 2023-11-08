@@ -20,13 +20,15 @@ This portfolio will allow me to showcase my work to future employers. It also se
 
 My portfolio is hosted on Github pages here:
 
-https://ericlyn4s.github.io/my_portfolio/
+https://ericlyn4s.github.io/eric_peterson_portfolio/
 
 The site contains three main sections, which are linked on the top right navigation bar:
 
     (1) My biography.
     (2) My projects, with my best work highlighted in the main large box. Each box links to the web-hosted site.
     (3) My contact information, with my Gihub and Linkedin profiles linked.
+
+I've also implemented responsive code that will reformat/rearrange when the screen size is reduced.
 
 ![The live site - includes a navigation bar top right, a photo of me, my bio, and linked sections of my work](assets/images/live_site.png)
 

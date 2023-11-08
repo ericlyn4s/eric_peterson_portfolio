@@ -1,11 +1,14 @@
+/* Setting a consistent font and margin */
 * {
     font-family: var(--font); 
+    margin: 0px;
 }
-
+ /* Setting a consistent font */
 :root {
     --font: 'Verdana', 'Geneva', 'Tahoma', sans-serif;
 }
 
+/* Formatting the header to have the title on the left and nav links on the right */
 header {
     height: 70px;
     background-color: darkcyan;
@@ -14,8 +17,7 @@ header {
 
 h1 {
     display: inline;
-    font-size: 30px;
-    margin-top: 40px;
+    margin-left: 20px;
 }
 
 nav {
@@ -24,81 +26,72 @@ nav {
 }
 
 a {
-    text-align: right;
-    vertical-align: middle;
-    display: inline;
-    flex-wrap: wrap;  
     margin: 20px;
-    flex-direction: column;
     font-size: 15px;
     text-decoration: none;
     color: white;
 }
 
+/* When the cursor hovers over the nav links, formatting them to turn blue */
 a:hover {
     color: rgb(5, 51, 79);
 }
 
-body {
-    font-size: 14px;
-    margin: 0px;
+#headshot-section {
+    background-image: linear-gradient(
+        darkcyan 0%,
+        white 100%
+    ); /* Adding a gradient background from cyan (header color) to white (main section color) */
 }
 
-#headshot {
-    background-color:rgb(245, 240, 240);
-    height: 150px;
-    margin: 0px;
-}
-
-img {
+#headshot-img {
     display: inline;
     height: 150px;
-    margin: 0px;
     margin-left: 50px;
 }
 
-#headshot h2 {
+#headshot-section h2 {
     float: right;
-    display: inline;
-    font-family: var(--font);
     font-size: 15px;
-    color: darkcyan;
+    color: rgb(5, 51, 79);
     margin: 100px 100px 10px 0px;
 }
 
+/* Creating a grid format for the main area - 5 columns by 6 rows */
 main {
     display: grid;
     grid-template-columns: repeat(5, 2fr);
     grid-template-rows: repeat(6, 1fr);
-    margin: 10px;
     color: rgb(5, 51, 79);
 }
 
-.subsection {
+/* Formatting each of the three sebsection titles */
+.subsection-title {
     text-align: right;
-    vertical-align: middle;
     margin: 10px 20px;
     padding: 20px;
-    border-right: solid;
-    border-right-color: rgb(5, 51, 79);
-    font-size: 20px;
+    border-right: solid rgb(5, 51, 79);
 }
 
-#about-me {
+/* Assigning the about me title to column 1 row 2 */
+#about-me-title {
     grid-area: 1 / 1 / 2 / 2;
 }
 
+/* Assigning the about me text to columns 2-6 row 6 */
 #about-me-text {
     grid-area: 1 / 2 / 2 / 6;
     font-size: 15px;
     padding: 30px 0;
 }
 
-#my-work {
+/*Assigning the my work title to encompass column 1 rows 2-6 */
+#my-work-title {
     grid-area: 2 / 1 / 6 / 2;
 }
 
-.project {
+/* Setting up each project 'box' */
+.projects {
     display: flex;
     flex-direction: column;
     justify-content: flex-end; /* Align items at the bottom of the container */
@@ -107,25 +100,27 @@ main {
     padding: -10px;
 }
 
-.project:hover {
+.projects:hover {
     opacity: 0.5;
 }
 
-.project h3 {
+/* Ensuring each project's title is offset from the bottom of the box */
+.projects h3 {
     text-align: left;
     width: 50%;
-    border-left: 0px;
     padding: 4px;  
     background-color: darkcyan;
     color: white;
+    margin-bottom: 2%;
 }
 
-
+/* Assigning the html-css area to columns 2-4 rows 2-6 */
 #html-css {
     grid-area: 2 / 2 / 4 / 6;
     background: url("../images/html_css_refactor.png"), lightgray;
 }
 
+/* Assigning the remaining projects to rows 4-6 columns 2-6 */
 #prework-studyguide {
     grid-area: 4 / 2 / 5 / 4;
     background: url("../images/prework_study_guide.png"), lightgrey;
@@ -146,10 +141,12 @@ main {
     background: lightgray;
 }
 
-#contact-me {
+/* Assigning the contact area text to column 1 row 6 */
+#contact-me-title {
     grid-area: 6 / 1 / 7 / 2;
 }
 
+/* Assigning the contact area to columns 2-6 row 6 */
 #contact-area {
     grid-area: 6 / 2 / 7 / 6;
     padding: 100px 0;
@@ -163,23 +160,20 @@ main {
     color: white;
 }
 
+/* Formatting contact links to turn blue when cursor hovers over them */
 #contact-area a:hover {
     color: rgb(5, 51, 79);
 }
 
 @media screen and (max-width: 768px) {
-    
-    nav {
+/* Formatting the screen to reduce margins, decrease font size, remove the 
+'thank you for visiting my page' text, and realigning the contact section */    
+
+    nav, #headshot-img {
         margin: 0px;
     }
 
-    img {
-        display: block;
-        margin: 0px;
-        align: center;
-    }
-
-    #headshot h2 {
+    #headshot-section h2 {
         display: none;
     }
 
@@ -189,20 +183,22 @@ main {
         grid-template-rows: repeat(6, 1fr);
         color: rgb(5, 51, 79);
     }
+  
+    .subsection-title {
+        margin: 10px 0px;
+        font-size: 13px;
+    }
 
     #about-me-text {
-        margin-left: 35px;
+        font-size: 12px;
+        padding-left: 10px;
     }
     
-    .project h3 {
+    .projects h3 {
         width: 100%;
         padding: 0px; 
-        font-size: 11px; 
-    }
-
-    .subsection {
-        margin: 10px 0px;
-        font-size: 10px;
+        margin-bottom: 10px;
+        font-size: 13px;
     }
 
     #contact-area a {
